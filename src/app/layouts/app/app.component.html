@@ -1,0 +1,14 @@
+
+  <app-header  (toggleSideBar)="toggleSideBar()"></app-header>
+<div class="sidebar" [ngClass]="expandSidebar?'active':''">
+  
+  <app-sidebar [expandSidebar]="expandSidebar" (toggleSideBar)="toggleSideBar()">
+    
+  </app-sidebar>
+</div>
+<div class="home_content">
+  <div style="height: 100%; position: relative; ">
+      <router-outlet #outlet="outlet" (activate)="changeOfRoutes()"></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>
